@@ -28,8 +28,17 @@ module.exports = class {
     }
   }
 
-  async getScans () {
-    const url = `${this.baseUrl}/scans`
+  async getScans (params = {}) {
+    let url = `${this.baseUrl}/scans`
+
+    if (Object.keys(params).length > 0) {
+      const queryParams = []
+      for (let param in params) {
+        queryParams.push(`${param}=${params[param]}`)
+      }
+      url += `?${queryParams.join('&')}`
+    }
+
     const response = await request.get(url, this.requestConfig)
 
     return response.data
