@@ -41,12 +41,12 @@ Uses the user and password supplied in the constructor to set auth headers for s
 ### .getScans()
 Returns a list of scans
 
-### .getScanById(scanId)
+### .getScanById(scanId[, historyId])
 Returns scan data for the given scan id
 
-### .getScanHost(scanId, hostId)
+### .getScanHost(scanId, hostId[, historyId])
 Returns host data for the the given scan and host id
 
-### .getScanHostPlugin(scanId, hostId, pluginId)
+### .getScanHostPlugin(scanId, hostId, pluginId[, historyId])
 Returns the plugin data for the given scan, host and plugin id
 
