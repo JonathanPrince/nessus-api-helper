@@ -80,4 +80,14 @@ module.exports = class {
 
     return response.data
   }
+
+  async getScanHostCompliance (scanId, hostId, complianceId, historyId) {
+    let url = `${this.baseUrl}/scans/${scanId}/hosts/${hostId}/compliance/${complianceId}`
+
+    if (historyId) url += `?history_id=${historyId}`
+
+    const response = await request.get(url, this.requestConfig)
+
+    return response.data
+  }
 }

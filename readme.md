@@ -54,3 +54,5 @@ Returns host data for the the given scan and host id
 ### .getScanHostPlugin(scanId, hostId, pluginId[, historyId])
 Returns the plugin data for the given scan, host and plugin id
 
+### .getScanHostCompliance(scanId, hostId, complianceId[, historyId])
+Returns the compliance plugin data for the given scan, host and compliance id
