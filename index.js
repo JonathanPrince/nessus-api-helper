@@ -28,6 +28,13 @@ module.exports = class {
     }
   }
 
+  async getFolders () {
+    const url = `${this.baseUrl}/folders`
+    const response = await request.get(url, this.requestConfig)
+
+    return response.data
+  }
+
   async getScans (params = {}) {
     let url = `${this.baseUrl}/scans`
 

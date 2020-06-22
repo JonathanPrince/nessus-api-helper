@@ -38,6 +38,9 @@ Make requests:
 ### .authenticate()
 Uses the user and password supplied in the constructor to set auth headers for subsequent requests.
 
+### .getFolders()
+Returns the folder list
+
 ### .getScans([queryObject])
 Returns a list of scans
 Optional query object can be used to add the query parameters `folder_id` and/or `last_modification_date`
