@@ -6,6 +6,12 @@ const helper = new Helper({})
 
 const API_URL = 'https://localhost:8834'
 
+test('getFolders', async () => {
+  const request = await helper.getFolders()
+
+  expect(request.url).toBe(`${API_URL}/folders`)
+})
+
 test('getScans without arguments', async () => {
   const request = await helper.getScans()
 
